@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "9b6cb1c2-88f1-4291-b673-212dbfaa9826",
+		"name": "FMR-Docker-11.2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22475093"
+	},
+	"item": [
+		{
+			"name": "Sevice started",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/ws/fusion/info/product",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ws",
+						"fusion",
+						"info",
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://64d170b01895a57083377d48a606ec47a7fc73dd4aae336b28a61d5c1b9ccdad"
+		}
+	]
+}
